@@ -17,7 +17,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
-	conn, err := postgres.ConnectToPostgres()
+	conn, err := postgres.ConnectToProdPostgres()
 	if err != nil {
 		log.Fatal("Failed to connect to postgres", err)
 	}

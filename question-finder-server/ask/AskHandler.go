@@ -16,3 +16,6 @@ func ConstructAskHandler() *AskHandler {
 func (h *AskHandler) AskHandler(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Hello, World!"})
 }
+func (askHandler *AskHandler) ProcessQuestionHandler(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{"message": "Hello, World!"})
+}

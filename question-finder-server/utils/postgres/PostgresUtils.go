@@ -3,6 +3,7 @@ package postgres
 import (
 	"context"
 	"log"
+	"os"
 
 	"github.com/jackc/pgx/v5/pgxpool"
 )
@@ -21,7 +22,7 @@ import (
 func ConnectToProdPostgres() (*pgxpool.Pool, error) {
 	var pool *pgxpool.Pool
 	var err error
-	connStr := "postgresql://postgres:VfNjUnaJRncfAZWWiRUfDeLveMStuCFR@shortline.proxy.rlwy.net:36073/railway"
+	connStr := os.Getenv("POSTGRES_DB_URL")
 	pool, err = pgxpool.New(context.Background(), connStr)
 	if err != nil {
 		log.Fatal("Failed to connect to DB:", err)

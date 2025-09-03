@@ -36,6 +36,15 @@ func (h *LoginRegisterHandler) LoginHandler(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"token": resp})
 }
 
+// TODO: Implement Google Login Callback Handler, this is where we verify the token and upser user if they are not in the database
+func (loginHandler *LoginRegisterHandler) GoogleLoginCallbackHandler(c *gin.Context) {
+	var googleLoginRequest = types.GoogleLoginRequest{}
+	if err := c.ShouldBindJSON(&googleLoginRequest); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
+		return
+	}
+}
+
 func (loginHandler *LoginRegisterHandler) RegisterHandler(c *gin.Context) {
 	var req types.RegisterRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
@@ -57,6 +66,7 @@ func (loginHandler *LoginRegisterHandler) RegisterHandler(c *gin.Context) {
 
 }
 
+// TODO: Implement Google Login Handler
 func (loginHandler *LoginRegisterHandler) GoogleLoginHandler(c *gin.Context) {
 	var googleLoginRequest = types.GoogleLoginRequest{}
 	if err := c.ShouldBindJSON(&googleLoginRequest); err != nil {

@@ -8,6 +8,9 @@ require (
 	github.com/jackc/pgx/v5 v5.7.5
 	github.com/joho/godotenv v1.5.1
 	golang.org/x/crypto v0.39.0
+	golang.org/x/oauth2 v0.20.0
+	golang.org/x/oauth2/google v0.20.0
+	google.golang.org/api/idtoken v0.4.0
 )
 
 require (

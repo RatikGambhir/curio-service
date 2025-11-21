@@ -1,4 +1,4 @@
-module question_finder
+module curio
 
 go 1.24.3
 

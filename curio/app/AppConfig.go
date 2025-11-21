@@ -7,3 +7,7 @@ import (
 type PostgresConfig struct {
 	DB *pgxpool.Pool
 }
+
+type AppConfig struct {
+	PostgresConfig *PostgresConfig
+}

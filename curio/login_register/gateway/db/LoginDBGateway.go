@@ -2,10 +2,10 @@ package db
 
 import (
 	"context"
+	AppConfig "curio/app"
+	"curio/login_register/types"
 	"errors"
 	"log"
-	AppConfig "question_finder/app"
-	"question_finder/login_register/types"
 )
 
 type LoginRegisterDBGateway struct {

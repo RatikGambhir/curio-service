@@ -1,12 +1,12 @@
 package processor
 
 import (
+	AppConfig "curio/app"
+	dbGateway "curio/login_register/gateway/db"
+	"curio/login_register/types"
 	"errors"
 	"log"
 	"os"
-	AppConfig "question_finder/app"
-	dbGateway "question_finder/login_register/gateway/db"
-	"question_finder/login_register/types"
 	"regexp"
 	"time"
 

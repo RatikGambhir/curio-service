@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"question_finder/middleware"
+	"curio/middleware"
 
 	"github.com/gin-gonic/gin"
 )

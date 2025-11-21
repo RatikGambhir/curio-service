@@ -1,11 +1,11 @@
 package handlers
 
 import (
+	AppConfig "curio/app"
+	"curio/login_register/processor"
+	"curio/login_register/types"
 	"log"
 	"net/http"
-	AppConfig "question_finder/app"
-	"question_finder/login_register/processor"
-	"question_finder/login_register/types"
 
 	"github.com/gin-gonic/gin"
 )

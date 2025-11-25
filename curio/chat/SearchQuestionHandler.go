@@ -17,7 +17,7 @@ func NewSearchQuestionHandler(config *app.AppConfig) *SearchQuestionHandler {
 	}
 }
 
-func (h *SearchQuestionHandler) AskHandler(c *gin.Context) {
+func (h *SearchQuestionHandler) KeywordSearchHandler(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Hello, World!"})
 }
 func (askHandler *SearchQuestionHandler) ProcessQuestionHandler(c *gin.Context) {
